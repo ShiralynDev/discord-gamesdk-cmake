@@ -38,7 +38,7 @@ set(DISCORD_GAMESDK_SOURCES
         "${DISCORD_GAMESDK_SOURCE_DIR}/voice_manager.cpp"
         )
 set(DISCORD_GAMESDK_IMPORT_TARGET "discord-import")
-set(DISCORD_GAMESDK_TARGET "discord")
+set(DISCORD_GAMESDK_TARGET "discord_gamesdk")
 
 if (UNIX)
     set(DISCORD_GAMESDK_LIB_BIN "${DISCORD_GAMESDK_LIB_DIR}/discord_game_sdk.so")

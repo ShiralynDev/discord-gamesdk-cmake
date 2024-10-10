@@ -1,39 +1,36 @@
 # Discord GameSDK for CMake
-A minimal CMake subproject that powers Discord GameSDK for everyone.
+A better integration of Discord's Legacy SDK for CMake-based projects
 
-## How to use?
-Clone it as a git submodule of your project, or something else.
+## Overview
+With the release of Discord GameSDK, a few integrations of bringing it to CMake
+projects has been overwhelmingly painful. As a result, this was created for a better integration.
 
-Modify your project's `CMakeLists.txt`:
+## How to Use
+Clone this repository as a sub-module of your Git repository.
+
+### Extracting GameSDK libraries
+Grab Discord GameSDK [here](https://dl-game-sdk.discordapp.net/3.2.1/discord_game_sdk.zip),
+copy the contents of the `lib/x86_64` folder and paste it to this project's `lib` folder.
+
+>[!IMPORTANT]
+> Contents may vary depending on your selected machine architecture.
+> For example, if your machine is 32-bit, you may copy files from `lib/x86` instead
+
+### Modify your project's CMakeLists
+Add these lines to your project's `CMakeLists.txt`:
 ```cmake
 add_subdirectory(discord_gamesdk_cmake)
-... 
+...
 ...
 target_link_libraries(YOUR_TARGET
-	discord
+	discord_gamesdk
 	...
 	)
 ```
 
 ## Structure
- - `lib` - Where it's imported libraries reside, read [lib/README.md](lib/README.md) for more info.
- - `src` - Source and header files for Discord GameSDK, which makes use of the imported libraries.
+ - `lib` - Where the GameSDK library files reside, read [Extracting GameSDK libraries](#extracting-gamesdk-libraries) for more information.
+ - `src` - Source and header files for Discord GameSDK, which makes use of the Discord GameSDK libraries.
 
-## `discord` target
-It is a wrapper for the imported `discord_game_sdk` libraries. The source and header files are compiled into what would `discord` be generated.
-
-### Renaming the `discord` target
-You might want to rename it because it's not looking fit for your project.
-
-Simply replace line 6 with this code in the parent `CMakeLists.txt`:
-```cmake
-set(DISCORD_GAMESDK_BIN_RUNTIME "${CMAKE_CURRENT_BINARY_DIR}/YOURNAME.dll" PARENT_SCOPE)
-```
-
-If you are targeting for Windows, also replace line 45:
-```cmake
-set(DISCORD_GAMESDK_BIN_RUNTIME "${CMAKE_CURRENT_BINARY_DIR}/YOURNAME.so" PARENT_SCOPE)
-```
-
-## How to obtain the libraries?
-Read [lib/README.md](lib/README.md#how-to-get-them)
+## License
+This project is licensed under the [Unlicense](LICENSE).
