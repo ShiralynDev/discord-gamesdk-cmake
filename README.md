@@ -10,10 +10,14 @@ Clone this repository as a sub-module of your Git repository.
 
 ### Extracting GameSDK libraries
 Grab Discord GameSDK [here](https://dl-game-sdk.discordapp.net/3.2.1/discord_game_sdk.zip),
-copy the contents of the `lib/x86_64` folder and paste it to this project's `lib` folder.
+extract the contents of the `lib/x86_64` folder and paste it to this project's `lib` folder.
+
+>[!NOTE]
+>The `lib` folder is not included by default, you must do it yourself.
 
 >[!IMPORTANT]
 > Contents may vary depending on your selected machine architecture.
+>
 > For example, if your machine is 32-bit, you may copy files from `lib/x86` instead
 
 ### Modify your project's CMakeLists
