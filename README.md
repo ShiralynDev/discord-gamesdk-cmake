@@ -1,4 +1,4 @@
-![Discord x CMake](docs/readme-header.png)
+![Discord x CMake](docs/header.png)
 
 # Discord GameSDK for CMake
 Bringing [Discord GameSDK](https://discord.com/developers/docs/developer-tools/game-sdk) to [CMake](https://cmake.org) build system.
