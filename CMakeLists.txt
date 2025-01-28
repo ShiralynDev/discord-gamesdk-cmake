@@ -60,6 +60,8 @@ endif ()
 add_library(${DISCORD_GAMESDK_TARGET} SHARED
         ${DISCORD_GAMESDK_SOURCES}
         )
+        target_compile_options(${DISCORD_GAMESDK_TARGET} PRIVATE -include cstdint)
+        
 set_target_properties(${DISCORD_GAMESDK_TARGET} PROPERTIES
         BUILD_WITH_INSTALL_RPATH FALSE
         LINK_FLAGS "-Wl,-rpath=$ORIGIN"

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream> // Discord, why aren't you using iostream for std namespaces?
-
 #include "ffi.h"
 #include "event.h"
 #ifdef _WIN32
