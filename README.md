@@ -1,7 +1,7 @@
-![Discord x CMake](docs/header.png)
+<picture>
+  <img width="500px" alt="Discord GameSDK for CMake-based projects" src="docs/header.png">
+</picture>
 
-Discord GameSDK for CMake-based projects
----
 Bringing [Discord GameSDK](https://discord.com/developers/docs/developer-tools/game-sdk) to [CMake](https://cmake.org) build system.
 
 ## Table of Contents
