@@ -1,11 +1,17 @@
 ![Discord x CMake](docs/header.png)
 
-# Discord GameSDK for CMake
+Discord GameSDK for CMake-based projects
+---
 Bringing [Discord GameSDK](https://discord.com/developers/docs/developer-tools/game-sdk) to [CMake](https://cmake.org) build system.
 
+## Table of Contents
+- [Overview](#overview)
+- [Usage](#usage)
+- [License](#license)
+
 ## Overview
-This project integrates the **Discord GameSDK** into **CMake** build system, allowing developers to use features like **Rich Presence**
-to their CMake-based projects.
+This project integrates the **Discord GameSDK** into **CMake** build system,
+allowing developers to use features like **Rich Presence** to their CMake-based projects.
 
 ## Usage
 1. Add the repository as a sub-module:
@@ -29,4 +35,4 @@ to their CMake-based projects.
 5. Profit
 
 ## License
-This project is licensed under the [Unlicense](LICENSE) license, see [LICENSE](LICENSE) for more information.
+This project is licensed under the Unlicense license, see [LICENSE](LICENSE) for more information.
