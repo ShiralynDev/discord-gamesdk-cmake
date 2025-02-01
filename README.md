@@ -10,7 +10,7 @@ Bringing [Discord GameSDK](https://discord.com/developers/docs/developer-tools/g
 - [License](#license)
 
 ## Overview
-This project aims to integrate Discord GameSDK into CMake, enabling features like rich presence, voice chat, achievements, and networking. The integration is streamlined for cross-platform compatibility, making it easier to build.
+This project aims to integrate **Discord GameSDK** into **CMake**, enabling features like rich presence, voice chat, achievements, and networking. The integration is streamlined for cross-platform compatibility, making it easier to build.
 
 ## Usage
 1. Add the repository as a sub-module:
