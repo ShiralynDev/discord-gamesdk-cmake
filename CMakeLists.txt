@@ -57,10 +57,14 @@ if (WIN32)
             )
 endif ()
 
-add_library(${DISCORD_GAMESDK_TARGET} SHARED
-        ${DISCORD_GAMESDK_SOURCES}
-        )
-        target_compile_options(${DISCORD_GAMESDK_TARGET} PRIVATE -include cstdint)
+add_library(${DISCORD_GAMESDK_TARGET} SHARED ${DISCORD_GAMESDK_SOURCES})
+
+if(MSVC)
+  target_compile_definitions(${DISCORD_GAMESDK_TARGET} PRIVATE _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNING)
+  # target_compile_options(${DISCORD_GAMESDK_TARGET} PRIVATE /FI"cstdint")
+else()
+  target_compile_options(${DISCORD_GAMESDK_TARGET} PRIVATE -include cstdint)
+endif()
         
 set_target_properties(${DISCORD_GAMESDK_TARGET} PROPERTIES
         BUILD_WITH_INSTALL_RPATH FALSE
