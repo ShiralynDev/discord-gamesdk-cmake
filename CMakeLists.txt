@@ -67,9 +67,19 @@ else()
 endif()
         
 set_target_properties(${DISCORD_GAMESDK_TARGET} PROPERTIES
-        BUILD_WITH_INSTALL_RPATH FALSE
+    BUILD_WITH_INSTALL_RPATH FALSE
+)
+
+if (MSVC)
+    set_target_properties(${DISCORD_GAMESDK_TARGET} PROPERTIES
+        LINK_FLAGS "/MANIFESTUAC:NO"
+    )
+else()
+    set_target_properties(${DISCORD_GAMESDK_TARGET} PROPERTIES
         LINK_FLAGS "-Wl,-rpath=$ORIGIN"
-        )
+    )
+endif()
+
 target_include_directories(${DISCORD_GAMESDK_TARGET} PUBLIC
         ${DISCORD_GAMESDK_SOURCE_DIR}
         )
